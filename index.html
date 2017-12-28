@@ -171,7 +171,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="apns-expiration-过期"><a href="#apns-expiration-过期" class="headerlink" title="apns-expiration:过期"></a>apns-expiration:过期</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;A UNIX epoch date expressed in seconds (UTC). This header identifies the date when the notification is no longer valid and can &gt;be discarded.</span><br><span class="line">&gt;If this value is nonzero, APNs stores the notification and tries to deliver it at least once, repeating the attempt as needed &gt;if it is unable to deliver the notification the first time. If the value is 0, APNs treats the notification as if it expires &gt;immediately and does not store the notification or attempt to redeliver it.</span><br></pre></td></tr></table></figure>
+<p> 以秒(UTC)表示的UNIX纪元日期。这个头标识了通知不再有效且可以丢弃的日期。如果这个值是非0，那么APNs会存储通知，并尝试至少传递一次，如果第一次无法提交通知，则需要重复尝试。如果该值为0，则APNs将通知视为立即过期，并且不存储通知或尝试重新提交它。<br> QoS中提到的过期时间是根据这个来执行的，如果填了一个小时则，设备在一小时内重新启动的话，还是会收到这个消息<br> 2017-12-26 07:26:17 +0000</p>
+
       
 
       

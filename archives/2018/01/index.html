@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>子明望</title>
+  <title>Archives: 2018/1 | 子明望</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="子明望">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2018/01/index.html">
 <meta property="og:site_name" content="子明望">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="子明望">
@@ -137,173 +137,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java基础知识1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/08/Java基础知识1/">Java基础知识1</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/08/Java基础知识1/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/08/Java基础知识1/" class="archive-article-date">
   	<time datetime="2018-01-08T08:45:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Java-static-和oc中的类方法相似"><a href="#Java-static-和oc中的类方法相似" class="headerlink" title="Java static (和oc中的类方法相似)"></a>Java static (和oc中的类方法相似)</h1><hr>
-<p>关于静态变量和静态方法的总结：</p>
-<blockquote>
-<ul>
-<li>一个类的静态方法只能访问静态变量；</li>
-<li>一个类的静态方法不能够直接调用非静态方法；（oc中类方法只能调用类方法）</li>
-<li>如访问控制权限允许，静态变量和静态方法也可以通过对象来访问，但是不被推荐；</li>
-<li>静态方法中不存在当前对象，因而不能使用 this，当然也不能使用 super；（oc中类方发不能调用self.属性）</li>
-<li>静态方法不能被非静态方法覆盖；</li>
-<li>构造方法不允许声明为 static 的；（oc中构造方法必须为类方法）</li>
-<li>局部变量不能使用static修饰。</li>
-<li>静态初始器仅仅在类装载的时候（第一次使用类的时候）执行一次（oc中的单例）</li></ul></blockquote>
-        
-          <a class="article-more-a" href="/2018/01/08/Java基础知识1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/08/Java基础知识1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-apns-expiration-apns-priority-apns-collapse-id-研究" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/">apns-expiration apns-priority apns-collapse-id 研究</a>
+      <a class="archive-article-title" href="/2018/01/08/Java基础知识1/">Java基础知识1</a>
     </h1>
   
 
-        
-        <a href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/" class="archive-article-date">
-  	<time datetime="2017-12-28T06:52:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/fish.jpg" alt="hello fish"></p>
-<h1 id="apns-expiration-过期"><a href="#apns-expiration-过期" class="headerlink" title="apns-expiration:过期"></a>apns-expiration:过期</h1><blockquote>
-<p>A UNIX epoch date expressed in seconds (UTC). This header identifies the date when the notification is no longer valid and can &gt;be discarded.<br>If this value is nonzero, APNs stores the notification and tries to deliver it at least once, repeating the attempt as needed &gt;if it is unable to deliver the notification the first time. If the value is 0, APNs treats the notification as if it expires &gt;immediately and does not store the notification or attempt to redeliver it.</p>
-<p>以秒(UTC)表示的UNIX纪元日期。这个头标识了通知不再有效且可以丢弃的日期。如果这个值是非0，那么APNs会存储通知，并尝试至少传递一次，如果第一次无法提交通知，则需要重复尝试。如果该值为0，则APNs将通知视为立即过期，并且不存储通知或尝试重新提交它。<br>QoS中提到的过期时间是根据这个来执行的，如果填了一个小时则，设备在一小时内重新启动的话，还是会收到这个消息<br>2017-12-26 07:26:17 +0000<br></p></blockquote>
-        
-          <a class="article-more-a" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/#more">more >></a>
-        
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">APNs字段</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ios//" class="article-tag-list-link color4">ios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -325,9 +199,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

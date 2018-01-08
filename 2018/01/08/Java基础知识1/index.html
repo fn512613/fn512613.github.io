@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>子明望</title>
+  <title>Java基础知识1 | 子明望</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="子明望">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Java static (和oc中的类方法相似) 关于静态变量和静态方法的总结：   一个类的静态方法只能访问静态变量； 一个类的静态方法不能够直接调用非静态方法；（oc中类方法只能调用类方法） 如访问控制权限允许，静态变量和静态方法也可以通过对象来访问，但是不被推荐； 静态方法中不存在当前对象，因而不能使用 this，当然也不能使用 super；（oc中类方发不能调用self.属性） 静态方法不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础知识1">
+<meta property="og:url" content="http://yoursite.com/2018/01/08/Java基础知识1/index.html">
 <meta property="og:site_name" content="子明望">
+<meta property="og:description" content="Java static (和oc中的类方法相似) 关于静态变量和静态方法的总结：   一个类的静态方法只能访问静态变量； 一个类的静态方法不能够直接调用非静态方法；（oc中类方法只能调用类方法） 如访问控制权限允许，静态变量和静态方法也可以通过对象来访问，但是不被推荐； 静态方法中不存在当前对象，因而不能使用 this，当然也不能使用 super；（oc中类方发不能调用self.属性） 静态方法不">
+<meta property="og:updated_time" content="2018-01-08T08:48:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="子明望">
+<meta name="twitter:title" content="Java基础知识1">
+<meta name="twitter:description" content="Java static (和oc中的类方法相似) 关于静态变量和静态方法的总结：   一个类的静态方法只能访问静态变量； 一个类的静态方法不能够直接调用非静态方法；（oc中类方法只能调用类方法） 如访问控制权限允许，静态变量和静态方法也可以通过对象来访问，但是不被推荐； 静态方法中不存在当前对象，因而不能使用 this，当然也不能使用 super；（oc中类方发不能调用self.属性） 静态方法不">
   
     <link rel="alternative" href="/atom.xml" title="子明望" type="application/atom+xml">
   
@@ -135,16 +139,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java基础知识1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java基础知识1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/08/Java基础知识1/">Java基础知识1</a>
+    <h1 class="article-title" itemprop="name">
+      Java基础知识1
     </h1>
   
 
@@ -168,12 +170,106 @@
 <li>静态方法不能被非静态方法覆盖；</li>
 <li>构造方法不允许声明为 static 的；（oc中构造方法必须为类方法）</li>
 <li>局部变量不能使用static修饰。</li>
-<li>静态初始器仅仅在类装载的时候（第一次使用类的时候）执行一次（oc中的单例）</li></ul></blockquote>
-        
-          <a class="article-more-a" href="/2018/01/08/Java基础知识1/#more">more >></a>
-        
+<li>静态初始器仅仅在类装载的时候（第一次使用类的时候）执行一次（oc中的单例）<a id="more"></a>
+</li>
+</ul>
+</blockquote>
+<h1 id="抽象类（用的没有接口多）"><a href="#抽象类（用的没有接口多）" class="headerlink" title="抽象类（用的没有接口多）"></a>抽象类（用的没有接口多）</h1><hr>
+<blockquote>
+<p>abstract class People{}// 定义一个抽象类<br>public abstract void work();// 抽象方法</p>
+</blockquote>
+<p>在下列情况下，一个类将成为抽象类：</p>
+<blockquote>
+<ul>
+<li>当一个类的一个或多个方法是抽象方法时；</li>
+<li>当类是一个抽象类的子类，并且不能为任何抽象方法提供任何实现细节或方法主体时；</li>
+<li>当一个类实现一个接口，并且不能为任何抽象方法提供实现细节或方法主体时；<br>注意：这里说的是这些情况下一个类将成为抽象类，没有说抽象类一定会有这些情况。</li>
+</ul>
+</blockquote>
+<h1 id="接口（相当于oc中的protocol）"><a href="#接口（相当于oc中的protocol）" class="headerlink" title="接口（相当于oc中的protocol）"></a>接口（相当于oc中的protocol）</h1><hr>
+<p>接口的使用与类的使用有些不同。在需要使用类的地方，会直接使用new关键字来构建一个类的实例，但接口不可以这样使用，因为接口不能直接使用 new 关键字来构建实例。<br>接口必须通过类来实现(implements)它的抽象方法，然后再实例化类。类实现接口的关键字为implements。<br>如果一个类不能实现该接口的所有抽象方法，那么这个类必须被定义为抽象方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">"Mammal eats"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travel</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">"Mammal travels"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">Dog m = <span class="keyword">new</span> Dog();</span><br><span class="line">m.eat();</span><br><span class="line">m.travel();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>1.接口可以多继承</li>
+<li>2.接口的方法声明必须是 public abstract 即便不写默认也是</li>
+<li>3.接口里面不能包含方法具体实现</li>
+<li>4.类实继承接口必须实现接口里申明的全部方法，除非该类是抽象类</li>
+<li>5.类里面可以声明 public static final 修饰的变量</li>
+<li>6.接口不能被实例化，但是可以被实现类创建</li>
+</ul>
+</blockquote>
+<h1 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h1><p>抽象类可以为部分方法提供实现，避免了在子类中重复实现这些方法，提高了代码的可重用性，这是抽象类的优势；而接口中只能包含抽象方法，不能包含任何实现。<br>一个类只能继承一个直接的父类（可能是抽象类），但一个类可以实现多个接口，这个就是接口的优势。</p>
+<blockquote>
+<p>#####接口与类的区别：</p>
+<ul>
+<li>抽象类中的方法可以有方法体，就是能实现方法的具体功能，但是接口中的方法不行。</li>
+<li>抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是 public static final 类型的。</li>
+<li>接口中不能含有静态代码块以及静态方法(用 static 修饰的方法)，而抽象类是可以有静态代码块和静态方法。</li>
+<li>一个类只能继承一个抽象类，而一个类却可以实现多个接口。</li>
+</ul>
+</blockquote>
+<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><hr>
+<p>下面是定义泛型方法的规则：</p>
+<blockquote>
+<ul>
+<li>所有泛型方法声明都有一个类型参数声明部分（由尖括号分隔），该类型参数声明部分在方法返回类型之前。</li>
+<li>每一个类型参数声明部分包含一个或多个类型参数，参数间用逗号隔开。一个泛型参数，也被称为一个类型变量，是用于指定一个泛型类型名称的标识符。</li>
+<li>类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。</li>
+<li>泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像int,double,char的等）</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"><span class="comment">// 实例化泛型类</span></span><br><span class="line">Point&lt;Integer, Integer&gt; p1 = <span class="keyword">new</span> Point&lt;Integer, Integer&gt;();</span><br><span class="line">p1.setX(<span class="number">10</span>);</span><br><span class="line">p1.setY(<span class="number">20</span>);</span><br><span class="line"><span class="keyword">int</span> x = p1.getX();</span><br><span class="line"><span class="keyword">int</span> y = p1.getY();</span><br><span class="line">System.out.println(<span class="string">"This point is："</span> + x + <span class="string">", "</span> + y);</span><br><span class="line"></span><br><span class="line">Point&lt;Double, String&gt; p2 = <span class="keyword">new</span> Point&lt;Double, String&gt;();</span><br><span class="line">p2.setX(<span class="number">25.4</span>);</span><br><span class="line">p2.setY(<span class="string">"东京180度"</span>);</span><br><span class="line"><span class="keyword">double</span> m = p2.getX();</span><br><span class="line">String n = p2.getY();</span><br><span class="line">System.out.println(<span class="string">"This point is："</span> + m + <span class="string">", "</span> + n);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义泛型类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span>&lt;<span class="title">T1</span>, <span class="title">T2</span>&gt;</span>&#123;</span><br><span class="line">T1 x;</span><br><span class="line">T2 y;</span><br><span class="line"><span class="function"><span class="keyword">public</span> T1 <span class="title">getX</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setX</span><span class="params">(T1 x)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.x = x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> T2 <span class="title">getY</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setY</span><span class="params">(T2 y)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.y = y;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">catch</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>错误类型：</p>
+<blockquote>
+<ul>
+<li>ArithmeticException     算术错误，如被0除</li>
+<li>ArrayIndexOutOfBoundsException     数组下标出界</li>
+<li>ArrayStoreException     数组元素赋值类型不兼容</li>
+<li>ClassCastException     非法强制转换类型</li>
+<li>IllegalArgumentException     调用方法的参数非法</li>
+<li>IllegalMonitorStateException     非法监控操作，如等待一个未锁定线程</li>
+<li>IllegalStateException     环境或应用状态不正确</li>
+<li>IllegalThreadStateException     请求操作与当前线程状态不兼容</li>
+<li>IndexOutOfBoundsException     某些类型索引越界</li>
+<li>NullPointerException     非法使用空引用</li>
+<li>NumberFormatException     字符串到数字格式非法转换</li>
+<li>SecurityException     试图违反安全性</li>
+<li>StringIndexOutOfBounds     试图在字符串边界之外索引</li>
+<li>UnsupportedOperationException     遇到不支持的操作</li>
+</ul>
+</blockquote>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -182,16 +278,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/08/Java基础知识1/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/08/Java基础知识1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">apns-expiration apns-priority apns-collapse-id 研究</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -211,98 +366,14 @@
 
 
 
-
   
-    <article id="post-apns-expiration-apns-priority-apns-collapse-id-研究" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/">apns-expiration apns-priority apns-collapse-id 研究</a>
-    </h1>
   
 
-        
-        <a href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/" class="archive-article-date">
-  	<time datetime="2017-12-28T06:52:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/fish.jpg" alt="hello fish"></p>
-<h1 id="apns-expiration-过期"><a href="#apns-expiration-过期" class="headerlink" title="apns-expiration:过期"></a>apns-expiration:过期</h1><blockquote>
-<p>A UNIX epoch date expressed in seconds (UTC). This header identifies the date when the notification is no longer valid and can &gt;be discarded.<br>If this value is nonzero, APNs stores the notification and tries to deliver it at least once, repeating the attempt as needed &gt;if it is unable to deliver the notification the first time. If the value is 0, APNs treats the notification as if it expires &gt;immediately and does not store the notification or attempt to redeliver it.</p>
-<p>以秒(UTC)表示的UNIX纪元日期。这个头标识了通知不再有效且可以丢弃的日期。如果这个值是非0，那么APNs会存储通知，并尝试至少传递一次，如果第一次无法提交通知，则需要重复尝试。如果该值为0，则APNs将通知视为立即过期，并且不存储通知或尝试重新提交它。<br>QoS中提到的过期时间是根据这个来执行的，如果填了一个小时则，设备在一小时内重新启动的话，还是会收到这个消息<br>2017-12-26 07:26:17 +0000<br></p></blockquote>
-        
-          <a class="article-more-a" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">APNs字段</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ios//" class="article-tag-list-link color4">ios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/28/apns-expiration-apns-priority-apns-collapse-id-研究/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -325,8 +396,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
